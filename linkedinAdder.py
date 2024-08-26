@@ -6,10 +6,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-print("---------------------- LINKEdLIN ADDER -------------------------")
-recherche = input("Entre le domaine des personnes du réseau recherché : ")
-id = input("Entre ton id Linkedin (mail) : ")
-mdp = input("Mot de passe Linkedin : ")
+import getpass
+
+print("---------------------- LINKEDIN ADDER -------------------------")
+recherche = input("Entrez le domaine des personnes du réseau recherché : ")
+id = input("Entrez votre identifiant LinkedIn (e-mail) : ")
+mdp = str(getpass.getpass('Mot de passe : '))
+ajoutsMax = input("Combien de personnes souhaitez-vous ajouter environ ? (1-100)")
 # Set up Chrome options
 options = Options()
 # You can add more options if needed, for example:
@@ -40,7 +43,7 @@ try:
 
 # artdeco-button artdeco-button--2 artdeco-button--secondary ember-view
 
-    while nb_ajouts < 70: 
+    while nb_ajouts < ajoutsMax: 
         time.sleep(2)
         pagenb +=1
         buttonlist = driver.find_elements(By.CLASS_NAME, "artdeco-button.artdeco-button--2.artdeco-button--secondary.ember-view")
