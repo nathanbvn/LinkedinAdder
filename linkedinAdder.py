@@ -43,7 +43,7 @@ try:
 
 # artdeco-button artdeco-button--2 artdeco-button--secondary ember-view
 
-    while nb_ajouts < ajoutsMax: 
+    while int(nb_ajouts) < int(ajoutsMax): 
         time.sleep(2)
         pagenb +=1
         buttonlist = driver.find_elements(By.CLASS_NAME, "artdeco-button.artdeco-button--2.artdeco-button--secondary.ember-view")
