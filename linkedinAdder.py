@@ -13,35 +13,34 @@ recherche = input("Entrez le domaine des personnes du réseau recherché : ")
 id = input("Entrez votre identifiant LinkedIn (e-mail) : ")
 mdp = str(getpass.getpass('Mot de passe : '))
 ajoutsMax = input("Combien de personnes souhaitez-vous ajouter environ ? (1-100)")
-# Set up Chrome options
-options = Options()
-# You can add more options if needed, for example:
-# options.add_argument('--headless')  # Run Chrome in headless mode
 
-# Initialize the WebDriver
-service = Service()  # Specify the path to your chromedriver
+options = Options()
+
+
+
+service = Service()  
 driver = webdriver.Chrome(service=service, options=options)
 nb_ajouts = 0
 pagenb = 2
 
 try:
-    # Navigate to the LinkedIn login page
+   
     url = "https://www.linkedin.com/search/results/people/?keywords="+recherche+"&page="+str(pagenb)+"&sid=MTY"
     driver.get(url)
 
-    # Locate the username input field using By.ID
+   
     element = driver.find_element(By.ID, "username")
-    element.send_keys(id)  # Send keys to the username field
+    element.send_keys(id)  
     time.sleep(1)
 
     element = driver.find_element(By.ID, "password")
-    element.send_keys(mdp)  # Send keys to the username field
+    element.send_keys(mdp) 
     time.sleep(1)
 
-    button = driver.find_element(By.CLASS_NAME, "btn__primary--large.from__button--floating")  # Replace with the actual button ID
+    button = driver.find_element(By.CLASS_NAME, "btn__primary--large.from__button--floating")  
     button.click()
 
-# artdeco-button artdeco-button--2 artdeco-button--secondary ember-view
+
 
     while int(nb_ajouts) < int(ajoutsMax): 
         time.sleep(2)
@@ -64,8 +63,7 @@ try:
 
 
 finally:
-    # Optional: Clos
-    # e the browser
+
     driver.quit()
     print(nb_ajouts,"ajouts")
     input("Fin du programme (appuyez sur une touche pour quitter)")
