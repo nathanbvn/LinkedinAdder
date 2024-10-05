@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/fd41df53-91a9-496f-aa0a-bb86c274c63a)
+
+
 # LinkedIn Adder Bot
 
 LinkedIn Adder est un script Python automatisé qui utilise Selenium pour ajouter automatiquement des personnes dans un domaine spécifique à votre réseau LinkedIn. Vous pouvez spécifier le domaine de recherche, le nombre de personnes à ajouter, et vos identifiants LinkedIn.
