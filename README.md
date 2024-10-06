@@ -26,7 +26,7 @@ Avant de pouvoir exécuter ce script, assurez-vous d'avoir installé les éléme
 1. Clonez ce dépôt ou téléchargez les fichiers directement.
 
 ```bash
-git clone https://github.com/votre-utilisateur/linkedin-adder-bot.git
+git clone https://github.com/nathanbvn/LinkedinAdder.git
 ```
 Installez les dépendances requises.
 ```bash
@@ -35,13 +35,13 @@ pip install selenium
 Téléchargez ChromeDriver et ajoutez-le à votre PATH, ou spécifiez son chemin dans le script Python si nécessaire.
 
 
-##Utilisation
+## Utilisation
 Ouvrez un terminal dans le répertoire du script.
 
 Exécutez le script Python.
 
 ```bash
-python linkedin_adder_bot.py
+python linkedinAdder.py
 ```
 
 Entrez les informations requises lorsque le script vous le demande :
